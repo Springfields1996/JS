@@ -55,43 +55,43 @@
 // alert(message);
 
 // //homework, task 05
-let price;
-let country = prompt(
-  "Укажите страну, в которую необходимо доставить товар"
-).toLowerCase();
-let message = `Доставка в ${country} будет стоить ${price} кредитов`;
-country = country.charAt(0).toUpperCase() + country.substring(1);
+// let price;
+// let country = prompt(
+//   "Укажите страну, в которую необходимо доставить товар"
+// ).toLowerCase();
+// let message;
+// country = country.charAt(0).toUpperCase() + country.substring(1);
 
-switch (country) {
-  case "Китай":
-    price = 80;
-    message = `Доставка в ${country} будет стоить ${price} кредитов`;
-    break;
+// switch (country) {
+//   case "Китай":
+//     price = 80;
+//     message = `Доставка в ${country} будет стоить ${price} кредитов`;
+//     break;
 
-  case "Чили":
-    price = 250;
-    message = `Доставка в ${country} будет стоить ${price} кредитов`;
-    break;
+//   case "Чили":
+//     price = 250;
+//     message = `Доставка в ${country} будет стоить ${price} кредитов`;
+//     break;
 
-  case "Австралия":
-    price = 170;
-    message = `Доставка в ${country} будет стоить ${price} кредитов`;
-    break;
+//   case "Австралия":
+//     price = 170;
+//     message = `Доставка в ${country} будет стоить ${price} кредитов`;
+//     break;
 
-  case "Индия":
-    price = 80;
-    message = `Доставка в ${country} будет стоить ${price} кредитов`;
-    break;
+//   case "Индия":
+//     price = 80;
+//     message = `Доставка в ${country} будет стоить ${price} кредитов`;
+//     break;
 
-  case "Ямайка":
-    price = 120;
-    message = `Доставка на ${country} будет стоить ${price} кредитов`;
-    break;
+//   case "Ямайка":
+//     price = 120;
+//     message = `Доставка на ${country} будет стоить ${price} кредитов`;
+//     break;
 
-  default:
-    message = "В вашей стране доставка не доступна";
-}
-alert(message);
+//   default:
+//     message = "В вашей стране доставка не доступна";
+// }
+// alert(message);
 
 // //homework, task 06
 
