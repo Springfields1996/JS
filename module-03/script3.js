@@ -183,15 +183,15 @@
 //     return (this.balance += amount);
 //   },
 
-//   /*
-//    * Метод отвечающий за снятие суммы с баланса.
-//    * Принимает сумму танзакции.
-//    * Вызывает createTransaction для создания объекта транзакции
-//    * после чего добавляет его в историю транзакций.
-//    *
-//    * Если amount больше чем текущий баланс, выводи сообщение
-//    * о том, что снятие такой суммы не возможно, недостаточно средств.
-//    */
+/*
+ * Метод отвечающий за снятие суммы с баланса.
+ * Принимает сумму танзакции.
+ * Вызывает createTransaction для создания объекта транзакции
+ * после чего добавляет его в историю транзакций.
+ *
+ * Если amount больше чем текущий баланс, выводи сообщение
+ * о том, что снятие такой суммы не возможно, недостаточно средств.
+ */
 //   withdraw(amount) {
 //     if (amount > this.balance) {
 //       alert("На счету недостаточно средств");
@@ -212,10 +212,8 @@
 //    */
 //   getTransactionDetails(id) {
 //     for (let elem of this.transactions) {
-//       for (let el in elem) {
-//         if (elem[el] && id) {
-//           return elem;
-//         }
+//       if (elem.id && id) {
+//         return elem;
 //       }
 //     }
 //   },
@@ -227,10 +225,8 @@
 //   getTransactionTotal(type) {
 //     let total = 0;
 //     for (let array of this.transactions) {
-//       for (let arr in array) {
-//         if (array[arr] === type) {
-//           total += array.amount;
-//         }
+//       if (array.type === type) {
+//         total += array.amount;
 //       }
 //     }
 //     return total;
@@ -247,4 +243,108 @@
 // console.log(account.getBalance());
 // console.log(account.getTransactionDetails(1));
 // console.log(account.getTransactionTotal("deposit"));
+
+// const onChange = function () {
+//   let total = 0;
+
+//   const onIncrement = function (n) {
+//     total += n;
+//     console.log(total);
+//   };
+
+//   const onDecrement = function () {
+//     total -= 1;
+//     console.log(total);
+//   };
+
+//   const mull = function () {
+//     total *= 2
+//     console.log(total)
+//   }
+
+//   return { onIncrement, onDecrement, mull };
+// };
+
+// let counter = onChange();
+// counter.onIncrement(10);
+// counter.onIncrement(3);
+
+// let counter2 = onChange();
+
+// const onChange = function () {
+//   let total = 0;
+
+//   const onIncrement = function (n) {
+//     total += n;
+//     console.log(total);
+//   };
+
+//   const onDecrement = function () {
+//     total -= 1;
+//     console.log(total);
+//   };
+
+//   const mull = function () {
+//     total *= 2
+//     console.log(total)
+//   }
+
+//   return { onIncrement, onDecrement, mull };
+// };
+
+// let counter = onChange();
+// counter.onIncrement(10);
+// counter.onIncrement(3);
+
+// let counter2 = onChange();
+
+// Напишите ф-цию, которая примает аргументами 2 числа,  задающих диапазон который нужно вывести в консоль
+// если в числе есть 3 - в консоль вместо него выводиться "three"
+// (то есть вместо 3, 13, 23 и т.д. должно быть "three");
+
+// const printMessage = (message) => console.log(message);
+// const letMessage = (callback, text) => {
+//   const string = text;
+//   callback(string);
+// };
+
+// letMessage(printMessage, "Bye");
+
+// const repeatNumber = (callback, n) => {
+//   let number = n;
+//   callback(number);
+// };
+// const sumNumber = (num) => {
+//   for (let i = 1; i <= num; i++) {
+//     console.log((i *= i));
+//   }
+// };
+
+// repeatNumber(sumNumber, 20);
+
+// const number = (value) => console.log(value);
+
+// const numberText = (num) => console.log("Number:", num);
+
+// const repeat = (action, n) => {
+//   for (let i = 1; i <= n; i++) {
+//     action(i);
+//   }
+// };
+
+// repeat(numberText, 25);
+
+// const repeat = function (n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// };
+
+// const labels = [];
+
+// repeat(5, (value) => {
+//   labels.push(`Label ${value + 1}`);
+// });
+
+// console.log(labels);
 
