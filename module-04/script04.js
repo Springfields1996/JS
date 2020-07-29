@@ -61,3 +61,80 @@
 
 // console.log(inventory.items); // ['Knife', 'Medkit']
 
+// const storeStatistic = {
+//   coats: 0,
+//   suits: 0,
+//   shoes: 0,
+// };
+
+// const StoreSells = function (type, color, size, quantity) {
+//   this.type = type;
+//   this.color = color;
+//   this.size = size;
+//   this.quantity = quantity;
+
+//   this.message = function () {
+//     console.log(
+//       `Вы заказали ${this.type}, цвет ${this.color}, размер ${this.size}, в количестве ${this.quantity}`
+//     );
+//   };
+//   this.counter = function () {
+//     if (this.type === "coat") {
+//       storeStatistic.coats += this.quantity;
+//     } else if (this.type === "suit") {
+//       storeStatistic.suits += this.quantity;
+//     } else if (this.type === "shoes") {
+//       storeStatistic.shoes += this.quantity;
+//     } else {
+//       console.log("К сожалению, данного товара не существует");
+//     }
+//   };
+// };
+
+// let coats = new StoreSells("coat", "orange", "L", 2);
+// console.log(coats());
+// console.log(storeStatistic);
+
+// message.bind(StoreSells)("coat", "blue", "s");
+
+// const ShowMeTheHotel = function (name, capacity, stars) {
+//     this.name = name;
+//     this.capacity = capacity;
+//     this.stars = stars;
+//     this.greet = function() {
+//         console.log(`Hello at ${this.name}`)
+//     }
+//     this.order = function(n) {
+// if(n<this.capacity) {
+//     this.capacity -= n;
+//     console.log(`you booked ${n} apartments at ${this.name}`)
+
+// } else( console.log('we have no appartments for you'));
+//     }
+// }
+
+// let Hayyat = new ShowMeTheHotel('Hayat', 500, 5);
+// let Hilton = new ShowMeTheHotel('Hilton', 200, 5)
+
+// Hayyat.greet();
+// Hayyat.order(1);
+// Hayyat.order(50);
+
+// Hilton.greet();
+// Hilton.order(10);
+
+// console.log(Hayyat)
+
+const Manager = function (name = "manager", sales = 0) {
+  this.name = name;
+  this.sales = sales;
+
+  this.sale = function (product) {
+    this.sales += 1;
+    console.log(`Manager ${this.name} sold ${product}`);
+  };
+};
+
+const danny = new Manager("Danny");
+danny.sale("phone");
+console.log(danny.sales);
