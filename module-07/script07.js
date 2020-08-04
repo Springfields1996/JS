@@ -46,13 +46,15 @@
 
 // const gallery = document.querySelector("#gallery");
 // gallery.className = "photos";
-// const photos = images.map(
-//   (photo) =>
+// const photos = images.reduce(
+//   (acc, photo) =>
+//     acc +
 //     `<li><img class = 'photo' src = '${photo["url"]}'
-//   alt = '${photo.alt}'></li>`
+//   alt = '${photo.alt}'></li>`,
+//   ""
 // );
 // console.log(photos);
-// gallery.insertAdjacentHTML("afterbegin", photos.join(""));
+// gallery.insertAdjacentHTML("afterbegin", photos);
 
 // HOMEWORK, task 04
 
