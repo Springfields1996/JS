@@ -1,0 +1,25 @@
+.photos {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.photo {
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  margin: 35px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}

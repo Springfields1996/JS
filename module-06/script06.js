@@ -18,12 +18,12 @@ import users from "./users.js";
 
 // const getUsersWithGender = (users, gender) =>
 //   users
-//     .map((user) => {
+//     .filter((user) => {
 //       if (user.gender === gender) {
 //         return user.name;
 //       }
 //     })
-//     .filter((elem) => elem !== undefined);
+//     .map((user) => user.name);
 
 // console.log(getUsersWithGender(users, "male"));
 
@@ -85,7 +85,7 @@ import users from "./users.js";
 //     }, [])
 //     .sort();
 
-// variant #2
+// // variant #2
 // const getSortedUniqueSkills = (users) =>
 //   users
 //     .flatMap((user) => user.skills)
@@ -94,3 +94,45 @@ import users from "./users.js";
 // console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit',
 // 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+// let body = document.querySelector("body");
+// let circle = document.createElement("div");
+// body.append(circle);
+
+// circle.style.width = "50px";
+// circle.style.height = "50px";
+// circle.style.backgroundColor = "tomato";
+// circle.style.borderRadius = "50%";
+// circle.style.margin = "0 auto";
+
+// let url = "https://pokeapi.co/api/v2/pokemon/1/";
+
+// (async () => {
+//   let response = await fetch(url);
+//   let pokemon = await response.json();
+
+//   let card = document.createElement("div");
+//   body.append(card);
+
+//   console.log(pokemon);
+
+//   card.style.width = "250px";
+//   card.style.height = "650px";
+//   card.style.backgroundColor = "grey";
+//   card.style.margin = "0 auto";
+//   let header = document.createElement("h2");
+//   card.append(header);
+//   header.textContent = pokemon.name;
+//   header.style.textAlign = "center";
+
+//   let img = document.createElement("img");
+//   card.append(img);
+//   img.style.display = "block";
+//   img.style.margin = "0 auto";
+//   img.style.width = "200px";
+//   img.style.height = "auto";
+
+//   img.setAttribute("src", pokemon.sprites.front_default);
+
+//   pokemon.moves.forEach((elem) => console.log(elem.move.name));
+// })();
