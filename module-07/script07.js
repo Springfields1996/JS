@@ -54,22 +54,27 @@
 
 // HOMEWORK, task 04
 
-// const div = document.querySelector("#counter");
-// const counter = document.querySelector("#value");
-// const decrementBtn = div.firstElementChild;
-// const incrementBtn = div.lastElementChild;
-// let counterValue = Number(counter.textContent);
+const div = document.querySelector("#counter");
+const counter = document.querySelector("#value");
+const decrementBtn = div.firstElementChild;
+const incrementBtn = div.lastElementChild;
+let counterValue = Number(counter.textContent);
 
-// function increment() {
-//   counter.textContent = ++counterValue;
-// }
+function increment() {
+  counter.textContent = ++counterValue;
+}
 
-// function decrement() {
-//   counter.textContent = --counterValue
-// };
+function decrement() {
+  counter.textContent = --counterValue;
+}
 
-// incrementBtn.addEventListener("click", increment);
-// decrementBtn.addEventListener("click", decrement);
+incrementBtn.addEventListener("click", increment);
+decrementBtn.addEventListener("click", decrement);
+
+//or
+
+// incrementBtn.addEventListener("click", () => counter.textContent = ++counterValue);
+// decrementBtn.addEventListener("click", () => counter.textContent = --counterValue);
 
 // HOMEWORK, task 05
 
