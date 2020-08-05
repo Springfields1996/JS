@@ -1,15 +1,14 @@
 // HOMEWORK, task 01
 
-// const categories = document.querySelector("#categories");
+// const categories = document.querySelectorAll("#categories .item");
 // const showQuantityOf = (category) =>
-//   console.log(`В списке ${category.children.length} категории.`);
+//   console.log(`В списке ${category.length} категории.`);
 // showQuantityOf(categories);
 
-// const subcategories = categories.querySelectorAll(".item");
-// const showSubcategories = subcategories.forEach((element) =>
-//   console.log(`Категория: ${element.querySelector("h2").textContent}.
-// Количество элементов: ${element.querySelectorAll("li").length}`)
-// );
+// const showSubcategories = categories.forEach((element) => {
+//   console.log(`Категория: ${element.children[0].textContent}.
+// Количество элементов: ${element.children[1].children.length}`);
+// });
 
 // HOMEWORK, task 02
 
@@ -43,17 +42,15 @@
 //     alt: "Group of Horses Running",
 //   },
 // ];
-
+// let photoLinks;
 // const gallery = document.querySelector("#gallery");
 // gallery.className = "photos";
-// const photos = images.reduce(
-//   (acc, photo) =>
-//     acc +
-//     `<li><img class = 'photo' src = '${photo.url}'
-//   alt = '${photo.alt}'></li>`,
-//   ""
-// );
-// gallery.insertAdjacentHTML("afterbegin", photos);
+// const photos = images.forEach((elem) => {
+//   photoLinks += `<li><img class = 'photo' src = '${elem.url}'
+//   alt = '${elem.alt}'></li>`;
+// });
+// console.log(photoLinks);
+// gallery.insertAdjacentHTML("afterbegin", photoLinks);
 
 // HOMEWORK, task 04
 
@@ -63,13 +60,12 @@
 // const incrementBtn = div.lastElementChild;
 // let counterValue = Number(counter.textContent);
 
-// const increment = () => {
-//   counterValue += 1;
-//   return (counter.textContent = counterValue);
-// };
-// const decrement = () => {
-//   counterValue -= 1;
-//   return (counter.textContent = counterValue);
+// function increment() {
+//   counter.textContent = ++counterValue;
+// }
+
+// function decrement() {
+//   counter.textContent = --counterValue
 // };
 
 // incrementBtn.addEventListener("click", increment);
