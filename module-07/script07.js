@@ -49,7 +49,7 @@
 // const photos = images.reduce(
 //   (acc, photo) =>
 //     acc +
-//     `<li><img class = 'photo' src = '${photo["url"]}'
+//     `<li><img class = 'photo' src = '${photo.url}'
 //   alt = '${photo.alt}'></li>`,
 //   ""
 // );
